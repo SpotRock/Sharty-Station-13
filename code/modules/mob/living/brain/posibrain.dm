@@ -122,7 +122,7 @@ GLOBAL_VAR(posibrain_notify_cooldown)
 		if(!brainmob.stored_dna)
 			brainmob.stored_dna = new /datum/dna/stored(brainmob)
 		C.dna.copy_dna(brainmob.stored_dna)
-	brainmob.timeofdeath = transfered_user.timeofdeath
+	brainmob.timeofdeath = C.timeofdeath
 	brainmob.set_stat(CONSCIOUS)
 	if(brainmob.mind)
 		brainmob.mind.set_assigned_role(SSjob.GetJobType(posibrain_job_path))
